@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngIf 01</h3>
+        <div *ngIf="username">
+            <h4>O usuario {{ username }} está logado</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngIf 02</h3>
+        <button *ngIf="!username && !email" class="btn btn-success btn-block" (click)="cadastrar()">CADASTRAR</button>
+        <button *ngIf="username && email" class="btn btn-warning btn-block">LOGAR</button>
+    </div>
+</div>

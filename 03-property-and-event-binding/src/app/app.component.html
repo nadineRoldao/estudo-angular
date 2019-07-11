@@ -1,0 +1,28 @@
+<!-- exemplo property binding -->
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h2 style="color: red">exemplo property binding</h2>
+        <img [src]="url" width='350px' height='200px' [alt]='descricao'>
+    </div>
+</div>
+
+<!-- exemplo event binding -->
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h2 style="color: red">exemplo event binding</h2>
+        <h4>{{ msg }}</h4>
+        <br><br>
+        <button class="btn btn-primary" (click)="change()">Mudar Mensagem</button>
+    </div>
+</div>
+
+<!-- exemplo two way data binding -->
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h2 style="color: red">exemplo two way data binding</h2>
+        <h4>{{ nome }}</h4>
+        
+        <br><br>
+        <input type="text" class="form-control" [(ngModel)]="nome">
+    </div>
+</div>

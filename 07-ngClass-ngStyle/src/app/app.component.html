@@ -1,0 +1,81 @@
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngClass 01 - Aplicando uma classe css por vez</h3>
+        <div *ngFor="let membro of membros">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="dot" [class.nao-vocal]="membro.posicao.indexOf('vocal') === -1"></span>
+                    <h5 class="card-title"> {{ membro.nome }} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ membro.posicao }} - {{ membro.idade }}
+                    </h6>
+                    <p class="card-text"> O status atual desse membro é {{ membro.status }} </p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngClass 02 - Aplicando várias classes do css </h3>      
+        <div *ngFor="let membro of membros">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="dot" [ngClass]="{
+                        'ativo': membro.status === 'Ativo',
+                        'inativo': membro.status === 'Inativo',
+                        'afastado': membro.status === 'Afastado_Temporariamente',
+                        'ex-membro': membro.status === 'Ex_Membro'
+                    }"></span>
+                    <h5 class="card-title"> {{ membro.nome }} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ membro.posicao }} - {{ membro.idade }}
+                    </h6>
+                    <p class="card-text"> O status atual desse membro é {{ membro.status }} </p>
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngStyle 01 - Aplicando style usando ternário </h3>      
+        <div *ngFor="let membro of membros">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <span class="dot" [style.background]="membro.posicao.indexOf('vocal') === -1 ? '#800080' : '#FF00FF'"></span>
+                    <h5 class="card-title"> {{ membro.nome }} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ membro.posicao }} - {{ membro.idade }}
+                    </h6>
+                    <p class="card-text"> O status atual desse membro é {{ membro.status }} </p>
+                </div>
+            </div>
+        </div>            
+    </div>
+</div>
+
+<div class="container mt-5">
+        <div class="jumbotron">
+            <h3 style="color: red;">Exemplo ngStyle 02 - Aplicando um objeto com vários styles </h3>      
+            <div *ngFor="let membro of membros">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <span class="dot2" [ngStyle]="{
+                            background: membro.posicao.indexOf('vocal') === -1 ? '#008080' : '#00FFFF',
+                            width: '25px',
+                            height: '25px'
+                        }"></span>
+                        <h5 class="card-title"> {{ membro.nome }} </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            {{ membro.posicao }} - {{ membro.idade }}
+                        </h6>
+                        <p class="card-text"> O status atual desse membro é {{ membro.status }} </p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>

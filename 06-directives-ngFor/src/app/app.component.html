@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngFor 01</h3>
+
+        <ul class="list-group" *ngFor="let musica of musicas; let i = index">
+            <li class="list-group-item"> {{ i + 1 }} - {{ musica }} </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h3 style="color: red;">Exemplo ngFor 02</h3>
+
+        <div *ngFor="let membro of membros">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ membro.nome }} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ membro.posicao }} - {{ membro.idade }}
+                    </h6>
+                    <p class="card-text"> O status atual desse membro é {{ membro.ativo ? '*ATIVO*' : '*INATIVO*' }} </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
