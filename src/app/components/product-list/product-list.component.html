@@ -1,0 +1,13 @@
+<!-- diretiva ngIf -->
+<div *ngIf="!products.length">
+    <p> Lista vazia</p>
+</div>
+  
+<!-- diretiva ngFor -->
+<div>
+    <ul>
+        <product-item (deleteProductEmitter)="deleteProductById($event)" 
+                      *ngFor="let productItem of products" 
+                      [product]="productItem"></product-item>
+    </ul>
+</div>

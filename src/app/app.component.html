@@ -1,3 +1,5 @@
+
+
 <!-- interpolation -->
 <h1> {{ banana }} </h1>
 <h1> {{ isUpdate ? 'Atualizacao do produto' : 'Novo Produto' }} </h1>
@@ -10,20 +12,6 @@
 <!-- event binding -->
 <div (mouseover)="testEventBindind()" style="width: 200px; height: 200px;">
   <button (click)="testEventBindind()" > TEST CLICK EVENT</button>
-</div>
-
-<!-- diretiva ngIf -->
-<div *ngIf="!products.length">
-  <p> Lista vazia</p>
-</div>
-
-<!-- diretiva ngFor -->
-<div>
-  <ul>
-    <ng-container *ngFor="let product of products">
-      <li>{{product.name}}</li>
-    </ng-container>
-  </ul>
 </div>
 
 <!-- two way data binding -->
