@@ -10,9 +10,15 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { MyLowsercasePipe } from './pipes/my-lowercase.pipe';
 import { ProductService } from './services/product.service';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { CpfMaskDirective } from './directives/cpf-mask.directive';
 
 const pipes = [
   MyLowsercasePipe
+]
+
+const directives = [
+  CpfMaskDirective
 ]
 
 @NgModule({
@@ -20,7 +26,9 @@ const pipes = [
     AppComponent,
     ProductItemComponent,
     ProductListComponent,
-    ...pipes
+    ProductFormComponent,
+    ...pipes,
+    ...directives
   ],
   imports: [
     BrowserModule,
